@@ -9,11 +9,6 @@ Tablet: 768px ate 992px
 Desktop: 992px ate 1200px
 Grandes telas: acima de 1200px
 
-@media print {
-    body {
-        
-    }
-}
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
    body {
@@ -49,5 +44,27 @@ Grandes telas: acima de 1200px
     img#print {display: none;}
     img#pc {display: none;}
     img#tv {display: block;}
+}
+
+@media print {
+
+    main h1 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site wwww.cursoemvideo.com';
+        text-decoration: overline;
+    }
+    
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
 }
 
